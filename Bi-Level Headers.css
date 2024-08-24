@@ -1,0 +1,41 @@
+/* Set headers at two size levels.
+ * The H2 is at a scale factor relative to H1.
+ * The H3 and H4 are at the scale factor ** 2 relative to H5.
+ */
+
+body {
+    --hh-sc-factor: 1.05;
+
+    /* H1: Large, bold, no variation. */
+    --h1-size: 1.618em;
+    --h1-weight: var(--font-bold);
+    --h1-variant: normal;
+
+    /* H2: Large, regular, all small caps */
+    --h2-size: calc(var(--h1-size) * var(--hh-sc-factor));
+    --h2-weight: var(--font-normal, --font-medium, --font-light);
+    --h2-variant: all-small-caps;
+
+    /* H3: Regular, bold, all small caps */
+    --h3-size: calc(1em * var(--hh-sc-factor) * var(--hh-sc-factor));
+    --h3-weight: var(--font-semibold, --font-bold, --font-medium, --font-extrabold, --font-blacj);
+    --h3-variant: all-small-caps;
+
+    /* H4: Regular, regular, all small caps */
+    --h4-size: calc(1em * var(--hh-sc-factor) * var(--hh-sc-factor));
+    --h4-weight: var(--font-normal);
+    --h4-variant: all-small-caps;
+
+    /* H5: Regular, bold, regular */
+    --h5-size: 1em;
+    --h5-weight: var(--font-semibold);
+    --h5-variant: normal;
+}
+
+/* Rule underneath H2 (section separator) */
+.markdown-preview-view h2::after,
+.markdown-source-view .HyperMD-header-2::after {
+    content: "";
+    display: block;
+    border-bottom: var(--color-base-25) 1px solid;
+}

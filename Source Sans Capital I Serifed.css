@@ -1,0 +1,4 @@
+/* Use the Source Sans Capital "I" glyph. */
+body {
+    --font-features-cv01: "cv01" 1;
+}

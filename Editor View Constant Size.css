@@ -1,0 +1,6 @@
+/* Present the editor view using the base code size. */
+
+.markdown-source-view:not(.is-live-preview) * {
+    font-size: calc(var(--code-size) * 1rem);
+    font-variant: normal !important;
+}

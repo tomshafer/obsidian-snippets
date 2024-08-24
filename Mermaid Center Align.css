@@ -1,0 +1,5 @@
+/* Center align Mermaid figures. */
+
+div.mermaid {
+    text-align: center;
+}

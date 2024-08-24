@@ -1,0 +1,18 @@
+/* Add basic CSS typography. */
+
+:root {
+    --font-features-kern: "kern" 1;
+    --font-features-liga: "liga" 1;
+    --font-features-lnum: "lnum" 1;
+    --font-features-cv01: "cv01" 0;
+}
+
+.markdown-source-view,
+.markdown-preview-view {
+    font-feature-settings: 
+        var(--font-features-kern),
+        var(--font-features-liga),
+        var(--font-features-lnum), 
+        var(--font-features-cv01);
+    text-rendering: optimizeLegibility;
+}

@@ -1,0 +1,8 @@
+/* Present the editor view using the monospace font.
+ * Use the code size by default as well.
+ */
+
+.markdown-source-view:not(.is-live-preview) {
+    font-family: var(--font-monospace);
+    font-size: var(--code-size);
+}
