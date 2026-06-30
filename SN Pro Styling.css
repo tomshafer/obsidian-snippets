@@ -1,0 +1,4 @@
+.markdown-source-view,
+.markdown-reading-view {
+    font-feature-settings: "calt" 1, "liga" 1, "dlig" 1, "ss01" 1;
+}
